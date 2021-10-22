@@ -1,18 +1,14 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
-      <v-card class="my-0" max-width="300">
-        <v-list>
-          <v-list-item-group v-model="model">
-            <v-list-item v-for="(item, i) in items" :key="i">
-              <v-list-item-content>
-                <v-list-item-title v-text="item.nome"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-card>
-    </v-app>
+  <div id="app">    
+    <ul class="list-group m-3 list"  v-for="item in items" :key="item.id">
+      <li @click="showItem(item)" class="list-group-item">
+          <div class="card-body d-flex justify-content-between">
+            <div>{{ item.nome }}</div>
+            <div>{{item.qtd_disponivel}}</div> 
+          </div>
+        
+        </li>      
+    </ul>
   </div>
 </template>
 
@@ -22,9 +18,16 @@ export default {
   data: () => ({
     model: 1,
   }),
+  methods:{
+    showItem(item){            
+      this.$emit('showItem',item)
+    }
+  }
 };
 </script>
 
 <style scoped>
-
+.list{
+  width: 14rem;
+}
 </style>
