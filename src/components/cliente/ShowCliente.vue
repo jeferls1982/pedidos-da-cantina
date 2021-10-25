@@ -12,13 +12,9 @@
         <div>{{ item.nome }}</div>
       </div>
       <div class="card-body d-flex justify-content-between">
-        <div>Preço:</div>
-        <div>{{ item.valor }}</div>
-      </div>
-      <div class="card-body d-flex justify-content-between">
-        <div>Qtd:</div>
-        <div>{{ item.qtd_disponivel }}</div>
-      </div>
+        <div>Telefone:</div>
+        <div>{{ item.fone }}</div>
+      </div>      
     </div>
     <div class="m-3 d-flex justify-content-center">
       <button @click="deleteItem(item.id)" class="btn btn-danger w-50">excluir</button>

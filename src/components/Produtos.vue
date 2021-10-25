@@ -20,7 +20,7 @@
 import List from "./global/List.vue";
 import TituloPage from "./global/AlertNomePage.vue";
 import BtnAdd from "./global/BtnAdd.vue";
-import Form from "./produto/Form.vue";
+import Form from "./cliente/Form.vue";
 import ShowProduto from "./produto/ShowProduto.vue";
 
 export default {
